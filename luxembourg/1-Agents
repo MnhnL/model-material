@@ -8,7 +8,7 @@ select
 	O.NAME_KEY as agentID,
 	O.FULL_NAME as preferredAgentName,
 	'ORGANISATION' as agentType
- from ORGANISATION O
+from ORGANISATION O
 
 
 select 
