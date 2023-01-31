@@ -3,7 +3,7 @@ select
 	concat(I.FORENAME , ' ', I.SURNAME ) as preferredAgentName,
 	'PERSON' as agentType
 from INDIVIDUAL I
-	union all
+	union 
 select 
 	O.NAME_KEY as agentID,
 	O.FULL_NAME as preferredAgentName,
@@ -22,7 +22,7 @@ select
 	NR.ROLE as relationshipTo,
 	NR.NAME_KEY_1 as objectAgentID
 from NAME_RELATION NR
-union 
+	union 
 select 
 	C.Parent_Collection_Collection_Unit_Key as subjectAgentID,
 	'parent of' as relationshipTo,
