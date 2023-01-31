@@ -12,7 +12,7 @@ I.NAME_KEY as identifierTargetID,
 	SF.FILE_NAME as identifierValue
 
 from INDIVIDUAL I
- join NAME_SOURCES NS on I.name_key =  NS.name_key
- join SOURCE_FILE SF on NS.SOURCE_KEY = SF.SOURCE_KEY
- where FILE_NAME like '%wikidata.org%'
- or FILE_NAME like '%ORCID%'
+	join NAME_SOURCES NS on I.name_key =  NS.name_key
+	join SOURCE_FILE SF on NS.SOURCE_KEY = SF.SOURCE_KEY
+where FILE_NAME like '%wikidata.org%' or FILE_NAME like '%ORCID%'
+	
