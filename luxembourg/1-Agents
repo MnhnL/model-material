@@ -1,6 +1,6 @@
 select 
 	I.NAME_KEY as agentID,
-	concat(I.FORENAME , ' ', I.SURNAME ) as preferredAgentName,
+	TRIM(concat(I.FORENAME , ' ', I.SURNAME )) as preferredAgentName,
 	'PERSON' as agentType
 from INDIVIDUAL I
 	union 
