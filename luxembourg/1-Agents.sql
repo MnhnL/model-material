@@ -1,8 +1,10 @@
+#### queries data for AGENTS  
+
 select 
 	I."NAME_KEY" as agentID,
 	TRIM(concat(I."FORENAME" , ' ', I."SURNAME" )) as preferredAgentName,
 	'PERSON' as agentType
-from foreign_all."INDIVIDUAL" I
+from foreign_all."PERSON" I
 
 union 
 
@@ -12,12 +14,15 @@ select
 	'ORGANISATION' as agentType
 from foreign_all."ORGANISATION" O
 
+#### queries data for COLLECTIONS  
 
 select 
 	C."Item_Name" as preferredAgentName,
 	C."Collection_Unit_Key" as agentID,
 	'COLLECTION' as agentType
 from foreign_all."Collection" C
+
+#### queries data for AGENTRALATIONSHIP  
 
 select 
 	NR."NAME_KEY_1" as subjectAgentID,
