@@ -15,7 +15,7 @@ from foreign_all."ORGANISATION" O
 
 select 
 	C."Item_Name" as preferredAgentName,
-	C."Collection"_Unit_Key as agentID,
+	C."Collection_Unit_Key" as agentID,
 	'COLLECTION' as agentType
 from foreign_all."Collection" C
 
